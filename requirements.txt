@@ -1,0 +1,21 @@
+torch==2.8.0
+torchvision==0.23.0
+torchaudio==2.8.0
+
+transformers
+accelerate
+peft
+tensorboard
+
+snac
+
+soundfile
+librosa
+
+sentencepiece
+pyyaml
+tqdm
+gdown
+
+# ── Flash Attention 2 (optional, see README) ──────────────────────────────────
+# flash-attn  # do NOT install via pip — see README for build instructions

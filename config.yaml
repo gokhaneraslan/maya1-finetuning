@@ -1,0 +1,37 @@
+# Paths
+model_path: "maya-research/maya1"
+dataset_dir: "./data/wavs"
+metadata_path: "./data/metadata_final.json"
+preprocessed_dir: "./data/preprocessed"
+output_dir: "./output/maya1_finetune"
+
+resume_from_checkpoint: null # e.g. "./output/maya1_finetune/checkpoint-560"
+
+# Sequence limits
+max_text_len: 400
+max_speech_len: 3000
+
+# Training hyperparameters
+batch_size: 4
+gradient_accumulation_steps: 16 # effective batch = 64
+learning_rate: 5e-5
+num_epochs: 100
+warmup_steps: 560
+weight_decay: 0.01
+max_grad_norm: 1.0
+
+# Precision
+fp16: false
+bf16: true
+
+# Logging / checkpointing
+logging_steps: 10
+save_steps: 560
+save_total_limit: 15
+
+default_description: "Turkish narration, neutral tone, clear voice."
+
+sample_text: "Merhaba, bugün hava gerçekten çok güzel değil mi? Umarım her şey yolundadır."
+sample_description: >
+  Realistic female voice in her 30s with a Turkish accent.
+  Deep pitch, warm timbre, conversational pacing, neutral tone, narrator role.
